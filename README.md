@@ -1,4 +1,4 @@
-###                            seekAudioNS  
+###                            seekAudioNS简介
 
 这是降噪技术seekaudio的测试程序，由寻声科技团队研发
 
@@ -16,6 +16,9 @@ seekAudioTest.exe  d://test.pcm  d://out.pcm  0
 
 
 
+
+###                            seekAudioNS brief introduction
+
 This is the test program for the noise reduction technology SeekAudio, developed by the SeekAudio Tech team. 
 
 SeekAudio features exceptional audio noise reduction capabilities. It is an AI-powered denoising model trained on vast amounts of audio data containing common natural noises. Not only can it eliminate typical steady noise, but it also effortlessly removes non-stationary noise that traditional denoising algorithms struggle with—even suppressing artificially generated noise.Additionally, SeekAudio can operate smoothly in real-time on even low-end mobile devices with extremely low CPU usage. What's more, it can further optimize computational demands to suit specific user requirements.
@@ -26,17 +29,27 @@ This noise reduction library is not only ideal for VoIP audio/video communicatio
 
 The SeekAudio library features a simple and user-friendly interface. You can open the project using Visual Studio 2017 or later versions. Alternatively, if Visual Studio is not available, you can directly run the pre-compiled seekAudioTest.exe from the release folder using Windows Command Prompt (cmd). Usage instructions are as follows:
 
-Usage: seekAudioTest.exe <input_file> <output_file> <mode>
+seekAudioTest.exe input_file output_file mode
+
 Parameters:
-  input_file  : Path to input PCM audio file
-  output_file : Path for output PCM audio file
-  mode        : Noise reduction mode selection:
-                0 - model_lite (default)
-                1 - model_main 
-                2 - webrtcNS
+
+input_file  : Path to input PCM audio file
+
+output_file : Path for output PCM audio file
+
+mode        : Noise reduction mode selection:
+
+0 - model_lite
+
+1 - model_main 
+
+2 - webrtcNS
+
 
 Command Example:
-  seekAudioTest.exe input.pcm output.pcm 1
+
+seekAudioTest.exe input.pcm output.pcm 1
+
 
 seekAudioTest.exe currently only processes raw PCM data at 16kHz sample rate, as the SeekAudio library exclusively supports 16,000Hz audio input at this stage.
 
